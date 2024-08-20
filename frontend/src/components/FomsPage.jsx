@@ -45,7 +45,7 @@ const FormsPage = () => {
     const onSubmit = async (data) => {
         try {
             setIsSubmitting(true);
-            await axios.post('https://magic-page.onrender.com/formlist', {
+            await axios.post('https://magic-backend.onrender.com/formlist', {
                 department: data.departamento,
                 email: data.email,
                 message: data.mensagem,
