@@ -11,7 +11,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path={process.env.REACT_APP_ADMIN_ROUTE} element={<FormListTable />} />
+        <Route path="/admin" element={<FormListTable />} />
       </Routes>
     </Router>
   </React.StrictMode>

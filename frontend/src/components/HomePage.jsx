@@ -4,8 +4,8 @@ import HomeButton from './buttons/HomeButton';
 import { Link } from 'react-scroll';
 import Title from '../images/parallax/Title.png';
 import Fundo from '../images/Fundo.png';
-import { Images } from '../static-data-parallax';
 import LayerFrente from '../images/parallax/LayerFrente.png';
+
 
 function HomePage() {
 
@@ -74,17 +74,54 @@ function HomePage() {
         <section id="Home" className="h-screen w-full overflow-hidden">
             <div className="bg-cover bg-center absolute top-0 left-0 w-full pointer-events-none h-full z-[0]" style={{ backgroundImage: `url(${Fundo})` }}></div>
             <div className="relative flex justify-center md:p-28 pt-32 h-full">
-                {Images.map((image, index) => (
-                    <motion.div
-                        key={index}
-                        className={`bg-cover bg-center absolute top-0 left-0 w-full pointer-events-none h-full z-[${image.z}] ${image.class}`}
-                        style={{ backgroundImage: `url(${image.name})` }}
-                        custom={image.custom}
-                        initial="hidden"
-                        animate="visible"
-                        variants={layerVariants}
-                    ></motion.div>
-                ))}
+                <motion.div
+                    className={`bg-cover bg-center absolute top-0 left-0 w-full pointer-events-none h-full z-[1] fundocentro`}
+                    style={{ backgroundImage: `url(${require('../images/parallax/FundoCentro.png')})` }}
+                    custom={3}
+                    initial="hidden"
+                    animate="visible"
+                    variants={layerVariants}
+                ></motion.div>
+                <motion.div
+                    className={`bg-cover bg-center absolute top-0 left-0 w-full pointer-events-none h-full z-[1] fundodireita`}
+                    style={{ backgroundImage: `url(${require('../images/parallax/FundoDireita.png')})` }}
+                    custom={3}
+                    initial="hidden"
+                    animate="visible"
+                    variants={layerVariants}
+                ></motion.div>
+                <motion.div
+                    className={`bg-cover bg-center absolute top-0 left-0 w-full pointer-events-none h-full z-[1] fundoesquerda`}
+                    style={{ backgroundImage: `url(${require('../images/parallax/FundoEsquerda.png')})` }}
+                    custom={3}
+                    initial="hidden"
+                    animate="visible"
+                    variants={layerVariants}
+                ></motion.div>
+                <motion.div
+                    className={`bg-cover bg-center absolute top-0 left-0 w-full pointer-events-none h-full z-[4] layermeio`}
+                    style={{ backgroundImage: `url(${require('../images/parallax/LayerMeio.png')})` }}
+                    custom={2}
+                    initial="hidden"
+                    animate="visible"
+                    variants={layerVariants}
+                ></motion.div>
+                <motion.div
+                    className={`bg-cover bg-center absolute top-0 left-0 w-full pointer-events-none h-full z-[4] meiodireita`}
+                    style={{ backgroundImage: `url(${require('../images/parallax/MeioDireita.png')})` }}
+                    custom={2}
+                    initial="hidden"
+                    animate="visible"
+                    variants={layerVariants}
+                ></motion.div>
+                <motion.div
+                    className={`bg-cover bg-center absolute top-0 left-0 w-full pointer-events-none h-full z-[4] meioesquerda`}
+                    style={{ backgroundImage: `url(${require('../images/parallax/MeioEsquerda.png')})` }}
+                    custom={2}
+                    initial="hidden"
+                    animate="visible"
+                    variants={layerVariants}
+                ></motion.div>
                 <motion.div
                     className="bg-cover bg-center absolute top-0 left-0 w-full pointer-events-none h-full z-[1000] layerfrente"
                     style={{ backgroundImage: `url(${LayerFrente})` }}
