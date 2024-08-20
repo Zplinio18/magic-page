@@ -1,4 +1,4 @@
-POST http://localhost:3333/formlist
+POST https://magic-page.onrender.com/formlist
 Content-type: application/json
 
 {
@@ -14,8 +14,8 @@ Content-type: application/json
 
 ###
 
-GET http://localhost:3333/formlist
+GET https://magic-page.onrender.com/formlist
 
 ### 
 
-DELETE http://localhost:3333/formlist/e09b540d-3273-4fd4-b17b-b3fc073b60bf
+DELETE https://magic-page.onrender.com/formlist/e09b540d-3273-4fd4-b17b-b3fc073b60bf

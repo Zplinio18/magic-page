@@ -13,7 +13,7 @@ const FormListTable = () => {
     // Função para buscar os dados da API
     const fetchFormList = async () => {
         try {
-            const response = await axios.get('http://localhost:3333/formlist');
+            const response = await axios.get('https://magic-page.onrender.com/formlist');
             setFormList(response.data);
         } catch (error) {
             console.error('Erro ao buscar dados:', error);
@@ -23,7 +23,7 @@ const FormListTable = () => {
     // Função para deletar um item pelo ID
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:3333/formlist/${id}`);
+            await axios.delete(`https://magic-page.onrender.com/formlist/${id}`);
             // Remover o item da lista local após deletar do banco de dados
             setFormList(formList.filter(item => item.id !== id));
         } catch (error) {
