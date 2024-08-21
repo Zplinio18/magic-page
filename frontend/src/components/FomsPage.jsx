@@ -192,6 +192,7 @@ const FormsPage = () => {
                                         <option value="Atendimento ao Cliente">Atendimento ao Cliente</option>
                                         <option value="Logística">Logística</option>
                                         <option value="Jurídico">Jurídico</option>
+                                        <option value="Outro">Outro</option>
                                     </select>
                                     {errors.departamento && <p className="text-red-500 text-sm mt-1">{errors.departamento.message}</p>}
                                 </div>
@@ -219,6 +220,7 @@ const FormsPage = () => {
                                         <option value="Construção Civil">Construção Civil</option>
                                         <option value="Transporte e Logística">Transporte e Logística</option>
                                         <option value="Marketing e Publicidade">Marketing e Publicidade</option>
+                                        <option value="Outro">Outro</option>
                                     </select>
                                     {errors.segmento_empresa && <p className="text-red-500 text-sm mt-1">{errors.segmento_empresa.message}</p>}
                                 </div>

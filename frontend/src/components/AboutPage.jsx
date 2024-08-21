@@ -59,6 +59,7 @@ function AboutPage() {
             </motion.div>
             <div className="flex items-center justify-center md:gap-36 gap-6 md:flex-row flex-col"> 
                 <motion.div
+                            ref={ref}
                             initial={{ opacity: 0, x: -100 }}
                             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
                             transition={{ duration: 1 }}
@@ -72,7 +73,7 @@ function AboutPage() {
                 </motion.div>
                 <div className="h-auto flex justify-center md:w-[55%] w-full md:gap-16 gap-6 items-center">
                     
-                    <div ref={ref} className="text-white text-justify text-lg mt-4 font-[Poppins] flex md:flex-row flex-col gap-4">
+                    <div className="text-white text-justify text-lg mt-4 font-[Poppins] flex md:flex-row flex-col gap-4">
                         <div className="border-l-4 border-b-4 border-magic-500 px-8 pb-8 rounded-xl text-center flex justify-between flex-col">
                             <span className="text-5xl"><ion-icon name="analytics-outline"></ion-icon></span>
                             <motion.p

@@ -43,26 +43,23 @@ server.post('/formlist', async (request, reply) => {
     to: email,
     subject: 'Confirmação de Recebimento do Formulário Magic',
     html: `
-      <div style="font-family: Arial, sans-serif; color: #333; border: 2px solid #A211EB; border-radius: 8px;">
-        <div style="background-color: #A211EB; padding: 20px; text-align: center;">
-          <h1 style="color: #FFFFFF;">• Estúdio Magic •</h1>
+      <div style="font-family: Arial, sans-serif; color: #333; border: 1px solid #bc92e1; border-radius: 8px;">
+        <div style="background-color: #bc92e1; padding: 20px; text-align: center; height: 2px;"></div>
+        <div style=" text-align: center;">
+          <h1 style="color: #bc92e1; font-size: 4rem; text-align: center;">Estúdio Magic</h1>
         </div>
-        <div style="padding: 20px;">
-          <p style="font-size: 16px;">Prezado(a) <strong>${name}</strong>,</p>
-          <p style="font-size: 16px;">
-            Agradecemos por preencher o formulário de contato. Recebemos suas informações e nossa equipe analisará sua solicitação com a máxima atenção.
-          </p>
-          <p style="font-size: 16px;">
-            Em breve, entraremos em contato para dar continuidade ao atendimento. Caso precise de mais informações ou queira fazer alterações nos dados fornecidos, por favor, responda a este e-mail ou entre em contato pelo nosso telefone.
-          </p>
-          <p style="font-size: 16px;">Atenciosamente,</p>
-          <p style="font-size: 16px;"><strong>Estúdio Magic</strong></p>
-          <p style="font-size: 16px;">(32) 9 9114 6046</p>
-          <p style="font-size: 16px;">
-            CRITT - Centro Regional de Inovação e Transferência de Tecnologia. Campus Universitário
-          </p>
+        <div style="align-items: center; display: flex; justify-content: center;">
+            <img src="https://cdn-icons-png.flaticon.com/512/4144/4144781.png " alt="" style="width: 15rem;">
         </div>
-        <div style="background-color: #A211EB; padding: 20px; text-align: center; height: 20px;"></div>
+        <div style=" text-align: center;display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <p style="font-size: 2rem;"><strong>Prezado(a) ${name}</strong>,</p>
+          <p style="font-size: 16px; width: 40rem;">
+            Agradecemos por preencher o formulário de contato. Recebemos suas informações e nossa equipe analisará sua solicitação com a máxima atenção. <br> Em breve, entraremos em contato para dar continuidade ao atendimento. Caso precise de mais informações ou queira fazer alterações nos dados fornecidos, por favor, responda a este e-mail ou entre em contato pelo nosso telefone.
+          </p>
+          <div style="border-bottom: 2px solid #bc92e1; background: none; height: 1px; width: 15rem; margin: 0px;" ></div>
+          <p style="font-size: 16px; color: grey;"><span style="color: #333; font-weight: 600;">Att. Magic</span><br><br>(32) 9 9114 6046 <br> CRITT - Centro Regional de Inovação e Transferência de Tecnologia. Campus Universitário</p>
+        </div>
+        <div style="background-color: #cf7afa; padding: 20px; text-align: center; height: 20px;"></div>
       </div>
     `,
   })
