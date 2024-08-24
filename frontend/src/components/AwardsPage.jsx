@@ -19,11 +19,6 @@ function AwardsPage() {
         threshold: 0.3,
     });
 
-    // Segundo ref para a seção "Nossos Cases de Sucesso"
-    const { ref: refElect, inView: inViewElect } = useInView({
-        triggerOnce: true,
-        threshold: 0.2,
-    });
 
 
     //Controlador do efeito de typing
@@ -48,9 +43,9 @@ function AwardsPage() {
             <div className="bg-gradient-to-b from-magic-200 to-magic-400 z-[99]">
                 <div className=" bg-center bg-cover w-full" style={{ backgroundImage: `url(${FundoAwards})`}}>
                     <motion.div
-                        initial={{ opacity: 0, y: -100 }}
-                        animate={inViewAwards ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
-                        transition={{ duration: 1 }}
+                        initial={{ opacity: 0}}
+                        animate={inViewAwards ? { opacity: 1} : { opacity: 0}}
+                        transition={{ duration: 2 }}
                         className="w-full md:text-5xl text-4xl text-white flex text-center items-center justify-center pt-8 font-bold"
                     >
                         <h1 className="md:border-b-8 w-auto md:border-white rounded-lg opacity-100  md:block flex flex-col items-center">Por que escolher a <span className="bg-white text-magic-200 md:rounded-t-lg md:rounded-ee-lg rounded-lg text-5xl md:mt-0 mt-2 w-48 h-14">Magic?</span></h1>
@@ -70,24 +65,17 @@ function AwardsPage() {
                                 ))}
                     </motion.p>
                     <div className="flex md:flex-row flex-col items-center justify-between w-full md:pt-7 md:px-56">
-                        <motion.div
-                        ref = {refElect}
-                        initial={{scaleY: 0, opacity: 0 }}
-                        animate={inViewElect ? {scaleY: 1, opacity: 1 } : {scaleY: 0, opacity: 0 }}
-                        transition={{ duration: 0.6 }}
+                        <div
                         className="flex flex-col w-96 p-8">
-                            <span className="text-8xl text-white text-center"><ion-icon name="ribbon"></ion-icon></span>
+                            <span className="rotate-shake text-8xl text-white text-center"><ion-icon name="ribbon"></ion-icon></span>
                             <p className="text-center font-semibold text-white"> Fomos eleitos em 2023 como a “Melhor Escola de  Programação de Juiz de Fora”, com votação popular  pelo instituto Idealize</p>
-                        </motion.div>
+                        </div>
                         <div className="brilhante md:h-64 h-1 w-[40%] md:w-1 bg-white"></div>
-                        <motion.div
-                        initial={{scaleY: 0, opacity: 0 }}
-                        animate={inViewElect ? {scaleY: 1, opacity: 1 } : {scaleY: 0, opacity: 0 }}
-                        transition={{ duration: 0.6 }}
+                        <div
                         className="flex flex-col w-96 p-8">
-                            <span className="text-8xl text-white text-center"><ion-icon name="trophy"></ion-icon></span>
+                            <span className=" rotate-shake text-8xl text-white text-center"><ion-icon name="trophy"></ion-icon></span>
                             <p className="text-center font-semibold text-white"> Também recebemos o prêmio de “Melhor Escola de  Informatica/Tecnologia” da Zona da Mata Mineira pelo  instituto Previlege.</p>
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </div>

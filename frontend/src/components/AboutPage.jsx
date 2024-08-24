@@ -50,9 +50,9 @@ function AboutPage() {
     return (
         <section className="md:h-screen h-auto w-full bg-gradient-to-b from-magic-300 to-magic-500 flex items-center justify-center md:gap-20 gap-8 md:p-20 p-14 flex-col overflow-x-hidden">
             <motion.div
-                        initial={{ opacity: 0, y: -100 }}
-                        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
-                        transition={{ duration: 1 }}
+                        initial={{ opacity: 0}}
+                        animate={inView ? { opacity: 1} : { opacity: 0}}
+                        transition={{ duration: 2 }}
                         className=" text-center py-1 md:text-4xl text-3xl font-medium text-white bg-magic-500 md:w-72 w-44 rounded-full border-2 border-white font-[Poppins] md:mt-0 mt-8"
             >
                 Sobre nós
