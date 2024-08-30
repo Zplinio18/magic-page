@@ -91,7 +91,7 @@ function AwardsPage() {
                                 initial={{ opacity: 0, x: -80 }}
                                 animate={inViewCases ? { opacity: 1, x: 0 } : { opacity: 0, x: -80 }}
                                 transition={{ duration: 1.2 }}
-                                className="flex md:flex-row flex-col gap-2 text-magic-400 md:h-80 h-auto p-6 bg-gradient-to-b from-offwhite to-white md:w-[34rem] w-full rounded-3xl brilhante font-semibold">
+                                className="mx-2 md:mx-0 flex md:flex-row flex-col gap-2 text-magic-400 md:h-80 h-auto p-6 bg-gradient-to-b from-offwhite to-white md:w-[34rem] w-full rounded-3xl brilhante font-semibold">
                                 <div className="md:h-full md:w-64 w-full h-64 bg-cover bg-center" style={{ backgroundImage: `url(${Embrapa})`}}></div>
                                 <p className="md:w-64 md:text-start text-center w-full">Case com A Empresa Brasileira de Pesquisa Agropecuária (Embrapa). uma instituição pública de pesquisa vinculada ao Ministério da Agricultura, Pecuária e Abastecimento do Brasil. Fundada em 1973, a Embrapa tem como missão desenvolver soluções de pesquisa, inovação e tecnologia para o setor agropecuário.</p>
                             </motion.div>
@@ -100,7 +100,8 @@ function AwardsPage() {
                             <motion.div 
                                 initial={{ opacity: 0, x: 80 }}
                                 animate={inViewCases ? { opacity: 1, x: 0 } : { opacity: 0, x: 80 }}
-                                transition={{ duration: 1.2 }} className="flex md:flex-row flex-col gap-2 text-magic-400 md:h-80 h-auto p-6 bg-gradient-to-b from-offwhite to-white w-full md:w-[34rem] rounded-3xl brilhante font-semibold" >
+                                transition={{ duration: 1.2 }} 
+                                className="mx-2 md:mx-0 flex md:flex-row flex-col gap-2 text-magic-400 md:h-80 h-auto p-6 bg-gradient-to-b from-offwhite to-white w-full md:w-[34rem] rounded-3xl brilhante font-semibold" >
                                 <div className="md:h-full md:w-64 w-full h-64 bg-cover bg-center" style={{ backgroundImage: `url(${Zencheck})`}}></div>
                                 <p className="md:w-64 md:text-start text-center w-full">Case com a Zencheck. A líder quando o assunto é softwares para controle de equipamentos de prevenção de incêndio. Os profissionais da Zencheck são formados em Engenharia e Tecnologia da Informação, com larga experiência em desenvolvimento de softwares.</p>
                             </motion.div>
